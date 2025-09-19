@@ -4,6 +4,35 @@
 #include <iomanip>
 using namespace std;
 
+void welcomemessage()
+{
+    int selection;
+    do
+    {
+        cout << "-----------------------------------------" << endl;
+        cout << "Welcome to McDonald's(MCD) Kiosk!" << endl;
+        cout << "You would like to DINE IN or TAKE AWAY?" << endl;
+        cout << "1.DINE IN" << endl;
+        cout << "2.TAKE AWAY" << endl;
+        cout << "Please enter 1 or 2 to continue: " << endl;
+        cin >> selection;
+
+        if (selection == 1)
+        {
+            cout << "---------------- DINE IN ----------------" << endl;
+        }
+        else if (selection == 2)
+        {
+            cout << "--------------- TAKE AWAY ---------------" << endl;
+        }
+        else
+        {
+            cout << "INVALID NUMBER!PLEASE TRY AGAIN" << endl;
+        }
+
+    } while (selection != 1 && selection != 2);
+}
+
 int main()
 {
     char option;
