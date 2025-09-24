@@ -315,8 +315,109 @@ float Detect_Menu_Option(char option, int op1)
             sum = sum + 2.83;
     }
 
-    //
-    //
+       else if (toupper(option) == 'F')
+    {
+        if (op1 == 1)
+            sum = sum + 5.52;
+
+        else if (op1 == 2)
+            sum = sum + 7.78;
+
+        else if (op1 == 3)
+            sum = sum + 6.79;
+
+        else if (op1 == 4)
+            sum = sum + 6.46;
+
+        else if (op1 == 5)
+            sum = sum + 6.46;
+
+        else if (op1 == 6)
+            sum = sum + 5.85;
+    }
+
+    return sum;
+}
+
+void messages_successful(float money, float total)
+{
+    float balance;
+
+    balance = money - total;
+    cout << endl;
+    cout << "Your payment is successful!" << " Your balance is RM " << showpoint
+         << fixed << setprecision(2) << balance << endl
+         << endl;
+    cout << "Reminder: " << endl;
+    cout << "Please collect your food items from counter." << endl;
+    cout << "Have a nice day! Enjoy yourselves!" << endl
+         << endl;
+}
+
+char Loop(float total)
+{
+    char respose;
+    do
+    {
+        cout << "The total bill is RM " << total << endl;
+        cout << "Please enter y / n only to continue payment: ";
+        cin >> respose;
+        cout << endl;
+
+    } while (tolower(respose) != 'y' && tolower(respose) != 'n');
+    return respose;
+}
+
+void clear_input(int quantity)
+{
+    cin.clear();
+    cin.ignore(1000, '\n');
+}
+
+string Display_Menu_Catogorise()
+{
+    char answer;
+    float money, sum, balance;
+    float total = 0;
+    char respose;
+    float fees = welcomemessage();
+
+    do
+    {
+        char option;
+        int quantity;
+        float op1;
+        const int OptionWidth = 10;
+        const int CategoryWidth = 28;
+
+        total = total + sum;
+        cout << "-----------------------------------------" << endl;
+        cout << "             Menu Categories             " << endl;
+        cout << "-----------------------------------------" << endl;
+        cout << left << setw(OptionWidth) << "Options" << left << setw(CategoryWidth) << "Food Categories" << endl;
+        cout << left << setw(OptionWidth) << "A" << left << setw(CategoryWidth) << "Burgers" << endl;
+        cout << left << setw(OptionWidth) << "B" << left << setw(CategoryWidth) << "Chickens & McNuggets" << endl;
+        cout << left << setw(OptionWidth) << "C" << left << setw(CategoryWidth) << "Happy Meals" << endl;
+        cout << left << setw(OptionWidth) << "D" << left << setw(CategoryWidth) << "Beverages" << endl;
+        cout << left << setw(OptionWidth) << "E" << left << setw(CategoryWidth) << "Rice & Porridge" << endl;
+        cout << left << setw(OptionWidth) << "F" << left << setw(CategoryWidth) << "Desserts & Sides" << endl;
+        cout << endl;
+        cout << "Please enter your choice (A to F): ";
+        cin >> option;
+        option = toupper(option);
+
+        while (cin.fail() || (option < 'A' || option > 'F'))
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter A to F only: ";
+            cin >> option;
+            cout << endl;
+            option = toupper(option);
+        }
+        cout << endl
+             << endl;
+    
     switch (option)
     {
     case 'A':
