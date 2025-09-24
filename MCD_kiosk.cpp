@@ -201,3 +201,116 @@ int get_valid_choice()
         }
     }
 }
+
+float Detect_Menu_Option(char option, int op1)
+{
+    float sum = 0.0;
+    int new_op1;
+
+    if (toupper(option) == 'A')
+    {
+
+        if (op1 == 1)
+        {
+            sum = sum + 9.43;
+        }
+
+        else if (op1 == 2)
+            sum = sum + 13.87;
+
+        else if (op1 == 3)
+            sum = sum + 13.77;
+
+        else if (op1 == 4)
+            sum = sum + 12.88;
+
+        else if (op1 == 5)
+            sum = sum + 9.95;
+
+        else if (op1 == 6)
+            sum = sum + 14.10;
+    }
+
+    else if (toupper(option) == 'B')
+    {
+        if (op1 == 1)
+            sum = sum + 18.87;
+
+        else if (op1 == 2)
+            sum = sum + 18.87;
+
+        else if (op1 == 3)
+            sum = sum + 33.30;
+
+        else if (op1 == 4)
+            sum = sum + 33.30;
+
+        else if (op1 == 5)
+            sum = sum + 10.61;
+
+        else if (op1 == 6)
+            sum = sum + 14.10;
+    }
+
+    else if (toupper(option) == 'C')
+    {
+        if (op1 == 1)
+            sum = sum + 11.13;
+
+        else if (op1 == 2)
+            sum = sum + 11.42;
+
+        else if (op1 == 3)
+            sum = sum + 11.13;
+
+        else if (op1 == 4)
+            sum = sum + 11.13;
+
+        else if (op1 == 5)
+            sum = sum + 11.13;
+
+        else if (op1 == 6)
+            sum = sum + 11.51;
+    }
+
+    else if (toupper(option) == 'D')
+    {
+        if (op1 == 1)
+            sum = sum + 5.66;
+
+        else if (op1 == 2)
+            sum = sum + 5.66;
+
+        else if (op1 == 3)
+            sum = sum + 5.66;
+
+        else if (op1 == 4)
+            sum = sum + 4.72;
+
+        else if (op1 == 5)
+            sum = sum + 6.04;
+
+        else if (op1 == 6)
+            sum = sum + 6.04;
+    }
+
+    else if (toupper(option) == 'E')
+    {
+        if (op1 == 1)
+            sum = sum + 16.79;
+
+        else if (op1 == 2)
+            sum = sum + 16.79;
+
+        else if (op1 == 3)
+            sum = sum + 8.02;
+
+        else if (op1 == 4)
+            sum = sum + 8.68;
+
+        else if (op1 == 5)
+            sum = sum + 7.26;
+
+        else if (op1 == 6)
+            sum = sum + 2.83;
+    }
