@@ -414,3 +414,88 @@ float Detect_Menu_Option(char option, int op1)
         sum = Detect_Menu_Option(option, op1) * quantity;
         cout << "Amount = RM " << sum << endl;
         break;
+
+    default:
+        cout << "Please enter A to F only" << endl;
+        break;
+    }
+    cout << endl;
+
+    cout << "Do you want to continue order? (Enter y / n): ";
+    cin >> answer;
+    cout << endl;
+    answer = tolower(answer);
+
+    while (cin.fail() || (answer != 'n' && answer != 'y'))
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Please enter y or n only" << endl;
+        cout << "Do you want to continue order? (Enter y / n): ";
+        cin >> answer;
+        cout << endl;
+        answer = tolower(answer);
+    }
+
+    if (answer == 'n')
+    {
+        cout << endl;
+        total = total + sum + fees;
+    }
+}
+while (answer == 'y')
+    ;
+
+bool paid = false;
+
+while (!paid)
+{
+    cout << "The total bill is RM " << total << endl;
+    cout << "Please top-up to make a payment: RM ";
+    cin >> money;
+
+    while (cin.fail() || money < total)
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << endl;
+        cout << "Payment unsuccessful or invalid input!" << endl;
+        cout << "Do you want to make a payment again? (Enter y / n): ";
+        cin >> respose;
+        cout << endl;
+        respose = tolower(respose);
+
+        while (cin.fail() || (respose != 'y' && respose != 'n'))
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input! Please enter y or n only." << endl;
+            cout << "Do you want to make a payment again? (Enter y / n): ";
+            cin >> respose;
+            cout << endl;
+            respose = tolower(respose);
+        }
+
+        if (respose == 'n')
+        {
+            cout << endl;
+            cout << "Order cancelled.... Welcome back! Have a nice day!" << endl;
+            return "Cancelled";
+        }
+        cout << "Please top-up to make a payment: RM ";
+        cin >> money;
+    }
+
+    messages_successful(money, total);
+    paid = true;
+}
+
+return "Done";
+}
+
+int main()
+{
+    Display_Menu_Catogorise();
+
+    return 0;
+}
