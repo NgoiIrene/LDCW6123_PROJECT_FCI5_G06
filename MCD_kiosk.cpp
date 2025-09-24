@@ -314,3 +314,103 @@ float Detect_Menu_Option(char option, int op1)
         else if (op1 == 6)
             sum = sum + 2.83;
     }
+
+    //
+    //
+    switch (option)
+    {
+    case 'A':
+        cout << "Go to menu A" << endl;
+        Display_MenuA();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
+
+    case 'B':
+        cout << "Go to menu B" << endl;
+        Display_MenuB();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
+
+    case 'C':
+        cout << "Go to menu C" << endl;
+        Display_MenuC();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
+
+    case 'D':
+        cout << "Go to menu D" << endl;
+        Display_MenuD();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
+
+    case 'E':
+        cout << "Go to menu E" << endl;
+        Display_MenuE();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
+
+    case 'F':
+        cout << "Go to menu F" << endl;
+        Display_MenuF();
+        op1 = get_valid_choice();
+        cout << "Please enter the quantity: ";
+        cin >> quantity;
+        while (cin.fail() || quantity < 1)
+        {
+            clear_input(quantity);
+            cout << "Invalid! Please enter a positive number for quantity: ";
+            cin >> quantity;
+        }
+        sum = Detect_Menu_Option(option, op1) * quantity;
+        cout << "Amount = RM " << sum << endl;
+        break;
